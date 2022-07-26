@@ -21,12 +21,17 @@ public class MyLinkedListRunner {
 //        listNode.printList();
 //        System.out.println("");
 
-        System.out.println("Deleting the last element in the list");
-        listNode.popLast();
-        listNode.printList();
+//        System.out.println("Deleting the last element in the list");
+//        listNode.popLast();
+//        listNode.printList();
 
         System.out.println("Searching the elements in the list");
         listNode.search(thirdNode);
+        listNode.printList();
+
+        System.out.println("Adding the element at any position");
+        MyNode<Integer> fourthNode = new MyNode<>(40);
+        listNode.addAtAnyPosition(thirdNode, fourthNode);
         listNode.printList();
     }
 }

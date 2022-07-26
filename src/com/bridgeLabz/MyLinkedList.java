@@ -4,6 +4,7 @@ package com.bridgeLabz;
 public class MyLinkedList<K> {
     public INode<K> head;
     public INode<K> tail;
+    public INode<K> size;
 
     public MyLinkedList() {
     }
@@ -76,6 +77,20 @@ public class MyLinkedList<K> {
             tempNode = tempNode.getNext();
         }
         if(check == false){
+        }
+    }
+    public void addAtAnyPosition(INode<K> tempNode,INode<K> node){
+        INode<K> tempNode1;
+        INode<K> iteratorNode = head;
+        while (iteratorNode != null) {
+            K data1 = tempNode.getKey();
+            K data2 = iteratorNode.getKey();
+            if (data1.equals(data2)) {
+                node.setNext(iteratorNode.getNext());
+                iteratorNode.setNext(node);
+                return;
+            }
+            iteratorNode = iteratorNode.getNext();
         }
     }
     public void printList() {
