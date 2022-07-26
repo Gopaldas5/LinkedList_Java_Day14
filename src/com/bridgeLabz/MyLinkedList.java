@@ -41,6 +41,14 @@ public class MyLinkedList<K> {
             newNode.setNext(oldNode);
         }
     }
+    public INode<K> popFirst(){
+        if(head==null){
+            return null;
+        }
+        INode<K> removedNode = head;
+        head=head.getNext();
+        return  removedNode;
+    }
     public void pop(){
         if(head==null){
             return;
