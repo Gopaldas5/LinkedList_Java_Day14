@@ -40,6 +40,12 @@ public class MyLinkedList<K> {
             newNode.setNext(oldNode);
         }
     }
+    public void pop(){
+        if(head==null){
+            return;
+        }
+        head=head.getNext();
+    }
     public void printList() {
         System.out.println("MyNode :- " + head);
     }

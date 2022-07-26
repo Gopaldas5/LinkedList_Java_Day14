@@ -19,5 +19,9 @@ public class MyLinkedListRunner {
 
         listNode.addMiddle(thirdNode);
         listNode.printList();
+
+        System.out.println("Deleting the first element in the list");
+        listNode.pop();
+        listNode.printList();
     }
 }
