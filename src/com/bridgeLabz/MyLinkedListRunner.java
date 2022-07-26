@@ -16,13 +16,17 @@ public class MyLinkedListRunner {
         listNode.addMiddle(thirdNode);
         listNode.printList();
 
-        System.out.println("Deleting the first element in the list");
-        listNode.pop();
-        listNode.printList();
-        System.out.println("");
+//        System.out.println("Deleting the first element in the list");
+//        listNode.pop();
+//        listNode.printList();
+//        System.out.println("");
 
         System.out.println("Deleting the last element in the list");
         listNode.popLast();
+        listNode.printList();
+
+        System.out.println("Searching the elements in the list");
+        listNode.search(thirdNode);
         listNode.printList();
     }
 }
