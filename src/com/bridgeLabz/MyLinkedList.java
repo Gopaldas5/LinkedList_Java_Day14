@@ -46,6 +46,18 @@ public class MyLinkedList<K> {
         }
         head=head.getNext();
     }
+    public void popLast(){
+        if(head==null){
+            return;
+        }
+        INode<K> tempNode;
+        tempNode = head;
+        while(tempNode.getNext() != tail){
+            tempNode = tempNode.getNext();
+        }
+        tempNode.setNext(null);
+        tail=tempNode;
+    }
     public void printList() {
         System.out.println("MyNode :- " + head);
     }
