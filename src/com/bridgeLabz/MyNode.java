@@ -18,7 +18,7 @@ public class MyNode<K> implements INode<K> {
 
     }
 
-    @Override
+   @Override
     public INode<K> getNext() {
         return next;
     }
