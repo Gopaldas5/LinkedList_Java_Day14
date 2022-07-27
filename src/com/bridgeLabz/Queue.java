@@ -8,9 +8,13 @@ public class Queue<K> {
     public void enqueue(INode<K> node){
         listNode.add(node);
     }
+    public INode<K> dequeue(){
+        return listNode.popFirst();
+    }
     public void printQueue(){
         listNode.printList();
     }
+
     public static void main(String[] args) {
 
         MyNode<Integer> firstNode = new MyNode<>(56);
